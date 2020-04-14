@@ -5,7 +5,7 @@ app.get('/makers/:nombre', (req, res) => {
   if (req.params.nombre === undefined) {
     res.send('<h1>Hola desconocido!</h1>' );
   } else {
-    res.send('<h1>Hola ' + req.params.nombre + '!</h1>' );
+    res.send('<h1>Hola ' + req.params.nombre.charAt(0).toUpperCase() + req.params.nombre.slice(1) + '!</h1>' );
   };
 });
 
